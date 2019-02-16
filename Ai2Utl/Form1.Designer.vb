@@ -27,6 +27,10 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.RepaintFileLabel = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.IncludeOper = New System.Windows.Forms.TextBox()
+        Me.ReplaceAllLabel = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.ReplacementFileLabel = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
@@ -34,7 +38,7 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(17, 158)
+        Me.Button1.Location = New System.Drawing.Point(17, 192)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(112, 35)
@@ -47,10 +51,10 @@ Partial Class Form1
         Me.OutputTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.OutputTextBox.Location = New System.Drawing.Point(17, 203)
+        Me.OutputTextBox.Location = New System.Drawing.Point(17, 248)
         Me.OutputTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.OutputTextBox.Name = "OutputTextBox"
-        Me.OutputTextBox.Size = New System.Drawing.Size(1230, 541)
+        Me.OutputTextBox.Size = New System.Drawing.Size(1230, 496)
         Me.OutputTextBox.TabIndex = 1
         Me.OutputTextBox.Text = ""
         '
@@ -79,16 +83,62 @@ Partial Class Form1
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.IncludeOper)
+        Me.GroupBox1.Controls.Add(Me.ReplaceAllLabel)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.RepaintFileLabel)
         Me.GroupBox1.Controls.Add(Me.ReplacementFileLabel)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(17, 23)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1230, 114)
+        Me.GroupBox1.Size = New System.Drawing.Size(1230, 161)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Settings"
+        '
+        'IncludeOper
+        '
+        Me.IncludeOper.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.IncludeOper.Location = New System.Drawing.Point(520, 116)
+        Me.IncludeOper.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.IncludeOper.Name = "IncludeOper"
+        Me.IncludeOper.ReadOnly = True
+        Me.IncludeOper.Size = New System.Drawing.Size(93, 26)
+        Me.IncludeOper.TabIndex = 8
+        '
+        'ReplaceAllLabel
+        '
+        Me.ReplaceAllLabel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ReplaceAllLabel.Location = New System.Drawing.Point(184, 113)
+        Me.ReplaceAllLabel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.ReplaceAllLabel.Name = "ReplaceAllLabel"
+        Me.ReplaceAllLabel.ReadOnly = True
+        Me.ReplaceAllLabel.Size = New System.Drawing.Size(93, 26)
+        Me.ReplaceAllLabel.TabIndex = 7
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(300, 116)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(224, 20)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "Seach Oper If Carrier Missing: "
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(15, 113)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(172, 20)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Replace Only Missing : "
         '
         'ReplacementFileLabel
         '
@@ -135,4 +185,8 @@ Partial Class Form1
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label2 As Label
     Friend WithEvents ReplacementFileLabel As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents IncludeOper As TextBox
+    Friend WithEvents ReplaceAllLabel As TextBox
 End Class

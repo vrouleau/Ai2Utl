@@ -36,10 +36,23 @@ Public Class Form1
         ReplacementFileLabel.Text = replacementFile
         
         repaintFile =  settings.utl.path +"\"+ settings.utl.repaintFileName
-        RepaintFileLabel.Text =repaintFile
+        RepaintFileLabel.Text = repaintFile
+        If settings.addOnlyMissing = False Then
+            ReplaceAllLabel.Text = "False"
+        Else
+            ReplaceAllLabel.Text = "True"
+        End If
+        If settings.includeOper = False Then
+            IncludeOper.Text = "False"
+        Else
+            IncludeOper.Text = "True"
+        End If
+
     End Sub
 
     Private Sub ReadSearchCodes()
+        utlCodeMap.Clear()
+
         Try
             Dim searchCodesjson As String = File.ReadAllText("dhq.ai2utl.search-codes.json")
             searchCodes = JsonConvert.DeserializeObject(Of SearchCode())(searchCodesjson)
@@ -48,10 +61,10 @@ Public Class Form1
                 utlCodeMap.Add(searchCode.UtlCode, aiCodeArray)
             Next
         Catch e As System.IO.FileNotFoundException
-                Logging("ERROR: Cant read settings file")
+            Logging("ERROR: Cant read settings file")
         End Try
     End Sub
-    
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Cursor = Cursors.WaitCursor 
         Application.DoEvents()
@@ -67,18 +80,18 @@ Public Class Form1
         Logging("=============================================================")
         Dim totalUtlAircraft As Integer = 0
         For Each repaintfleet As repaints_informationRepaint_fleet In repaintsInformation.repaints()
-            If BuildRepaintVisList(repaintfleet, repaintfleet.car, "CAR") = 0 Then
-                BuildRepaintVisList(repaintfleet, repaintfleet.oper, "OPER")
-            End If
-            totalUtlAircraft = totalUtlAircraft + 1
+                If BuildRepaintVisList(repaintfleet, repaintfleet.car, "CAR") = 0 And settings.includeOper = True Then
+                    BuildRepaintVisList(repaintfleet, repaintfleet.oper, "OPER")
+                End If
+                totalUtlAircraft = totalUtlAircraft + 1
         Next
 
         Logging("")
         Logging("=============================================================")
         Logging("")
-        Logging("Total UTL processed:" + CStr(totalUtlAircraft))
-        Logging("Total Replaced:     " + CStr(totalCount))
-        Logging("")
+            Logging("Total UTL Model processed:" + CStr(totalUtlAircraft))
+            Logging("Total Ai Replaced:        " + CStr(totalCount))
+            Logging("")
         Logging("=============================================================")
         OutputTextBox.ScrollToCaret()
         Dim output As New System.IO.StreamWriter(replacementFile)
@@ -181,11 +194,21 @@ Public Class Form1
         Dim newRepaintVisList As New List(Of repaints_informationRepaint_fleetRepaint_visual)
         Dim count As Integer=0
         Try
-        If (utlCodeMap.ContainsKey(repaintfleet.equip)) Then
-            For Each aiCode As String In utlCodeMap(repaintfleet.equip)
-                Dim key As String = MakeKey(aiCode, airLine)
-                If aircraftMap.ContainsKey(key) Then
-                    Dim airCraftList As HashSet(Of String) = aircraftMap.Item(key)
+            If (settings.addOnlyMissing = True) Then
+                If (repaintfleet.vis.Count > 1) Then
+                    Return 0
+                ElseIf repaintfleet.vis.Count = 1 Then
+                    If (Not repaintfleet.vis.ElementAt(0).title.Contains("Daedalus")) Then
+                        Return 0
+                    End If
+                End If
+            End If
+
+            If (utlCodeMap.ContainsKey(repaintfleet.equip)) Then
+                For Each aiCode As String In utlCodeMap(repaintfleet.equip)
+                    Dim key As String = MakeKey(aiCode, airLine)
+                    If aircraftMap.ContainsKey(key) Then
+                        Dim airCraftList As HashSet(Of String) = aircraftMap.Item(key)
                         For Each airCraftname As String In airCraftList
                             Dim newRepaintVis As New repaints_informationRepaint_fleetRepaint_visual
                             newRepaintVis.title = airCraftname
@@ -197,10 +220,11 @@ Public Class Form1
                             End If
                         Next
                     End If
-            Next
-        End If
+                Next
+            End If
         Finally
         End Try
+
         If newRepaintVisList.Count > 0 Then
             Dim newRepaintVisArray(newRepaintVisList.Count) As repaints_informationRepaint_fleetRepaint_visual
             Dim ratio As Integer = Math.Floor(100 / count)
@@ -230,6 +254,7 @@ Public Class Form1
     Private Function MakeKey(aiCode As String, airline As String) As String
         Return aiCode+"-"+airline
     End Function
+
 End Class
 
 
@@ -260,8 +285,8 @@ Public Class Settings
     Public utl As Utl
     Public flai As Flai
     Public miscai() As Miscai
-    Public programMode As String
-    Public addOnlyMissing As String
+    Public includeOper As Boolean
+    Public addOnlyMissing As Boolean
     Public maxRepaints As Integer
 End Class
 
