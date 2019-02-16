@@ -11,7 +11,7 @@ Public Class Form1
     Dim utlCodeMap As New Dictionary(Of String, String())
     Dim settings As Settings
     Dim searchCodes() As SearchCode
-    Dim logWriter As New System.IO.StreamWriter("dhq.ai2utl.log.txt")
+    Dim logWriter As System.IO.StreamWriter
     Dim repaintsInformation As repaints_information
     Dim totalReplaced As Integer
     Dim totalAiModels As Integer
@@ -68,12 +68,15 @@ Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Cursor = Cursors.WaitCursor 
         Application.DoEvents()
+        logWriter = New System.IO.StreamWriter("dhq.ai2utl.log.txt")
+        totalCount = 0
+        aircraftMap.Clear()
         Try
             If ReadRepaintsXml() = False Then
                 Return
             End If
 
-            ReadFlaiFolder()
+        ReadFlaiFolder()
         Logging("Flai Ai Models :    " + CStr(totalAiModels))
         ReadMiscAiFolder()
         Logging("Total Ai Models:    " + CStr(totalAiModels))
@@ -239,8 +242,12 @@ Public Class Form1
             Logging("Replace Utl Aircraft:" + repaintfleet.equip + "| Carrier: " + repaintfleet.car + " | Operator: " + repaintfleet.oper +" | Mode:" +type )
 
             For Each newRepaintVis As repaints_informationRepaint_fleetRepaint_visual In newRepaintVisList
-                newRepaintVis.val = ratio + firstRatio
-                firstRatio=0
+                newRepaintVis.val = ratio 
+                If firstRatio > 0 
+                    newRepaintVis.val = newRepaintVis.val + 1
+                    firstRatio=firstRatio-1
+                End If
+
             Next
             For Each repaintVis In newRepaintVisList
                 newRepaintVisArray(modCount) = repaintVis
