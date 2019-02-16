@@ -69,9 +69,11 @@ Public Class Form1
         Cursor = Cursors.WaitCursor 
         Application.DoEvents()
         Try
-        ReadRepaintsXml()
-        
-        ReadFlaiFolder()
+            If ReadRepaintsXml() = False Then
+                Return
+            End If
+
+            ReadFlaiFolder()
         Logging("Flai Ai Models :    " + CStr(totalAiModels))
         ReadMiscAiFolder()
         Logging("Total Ai Models:    " + CStr(totalAiModels))
@@ -105,21 +107,26 @@ Public Class Form1
     End Sub
 
 
-    Private Sub ReadRepaintsXml()
+    Private Function ReadRepaintsXml() As Boolean
         Dim xmldoc As New XmlDocument
 
+        Try
+            xmldoc.Load(repaintFile)
+            Dim allText As String = xmldoc.InnerXml
 
-        xmldoc.Load(repaintFile)
-        Dim allText As String = xmldoc.InnerXml
+            ' Re-Read the search code every time the button is pressed
+            ReadSearchCodes()
 
-        ' Re-Read the search code every time the button is pressed
-        ReadSearchCodes()
-
-        ' Load repaints.xml
-        Using currentStringReader As New StringReader(allText)
-            repaintsInformation = repaintsSer.Deserialize(currentStringReader)
-        End Using
-    End Sub
+            ' Load repaints.xml
+            Using currentStringReader As New StringReader(allText)
+                repaintsInformation = repaintsSer.Deserialize(currentStringReader)
+            End Using
+        Catch e As Exception
+            Logging("Error loading repaints file:" + e.Message)
+            Return False
+        End Try
+        Return True
+    End Function
 
     Private Sub ReadFlaiFolder()
         Try
