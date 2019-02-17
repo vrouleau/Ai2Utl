@@ -1,633 +1,507 @@
 [
   {
     "UtlCode": "100",
-    "AiCode": "F100",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "F100"
   },
   {
     "UtlCode": "141",
-    "AiCode": "B461",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B461"
   },
   {
     "UtlCode": "142",
-    "AiCode": "B462",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B462"
   },
   {
     "UtlCode": "143",
-    "AiCode": "B463",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B463"
   },
   {
     "UtlCode": "14X",
-    "AiCode": "B461;B462;B463",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B461;B462;B463"
   },
   {
     "UtlCode": "14Z",
-    "AiCode": "B461;B462;B463",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B461;B462;B463"
   },
   {
     "UtlCode": "310",
-    "AiCode": "A310",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A310"
   },
   {
     "UtlCode": "313",
-    "AiCode": "A310",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A310"
   },
   {
     "UtlCode": "318",
-    "AiCode": "A318",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A318"
   },
   {
     "UtlCode": "319",
-    "AiCode": "A319;A319neo",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A319;A319neo"
   },
   {
     "UtlCode": "31F",
-    "AiCode": "A310",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A310"
   },
   {
     "UtlCode": "31Y",
-    "AiCode": "A310",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A310"
   },
   {
     "UtlCode": "320",
-    "AiCode": "A320;A320neo",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A320;A320neo"
   },
   {
     "UtlCode": "321",
-    "AiCode": "A321;A321neo",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A321;A321neo"
   },
   {
     "UtlCode": "32A",
-    "AiCode": "A320",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A320"
   },
   {
     "UtlCode": "32B",
-    "AiCode": "A318;A319;A320;A321",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A318;A319;A320;A321"
   },
   {
     "UtlCode": "32D",
-    "AiCode": "A318;A319;A320;A321",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A318;A319;A320;A321"
   },
   {
     "UtlCode": "32S",
-    "AiCode": "A318;A319;A320;A321",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A318;A319;A320;A321"
   },
   {
     "UtlCode": "330",
-    "AiCode": "A332;A333",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A332;A333"
   },
   {
     "UtlCode": "332",
-    "AiCode": "A332",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A332"
   },
   {
     "UtlCode": "333",
-    "AiCode": "A333",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A333"
   },
   {
     "UtlCode": "33F",
-    "AiCode": "A332_F",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A332_F"
   },
   {
     "UtlCode": "33X",
-    "AiCode": "A332;A333",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A332;A333"
   },
   {
     "UtlCode": "340",
-    "AiCode": "A342;A343;A345;A346",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A342;A343;A345;A346"
   },
   {
     "UtlCode": "342",
-    "AiCode": "A342",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A342"
   },
   {
     "UtlCode": "343",
-    "AiCode": "A343",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A343"
   },
   {
     "UtlCode": "345",
-    "AiCode": "A345",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A345"
   },
   {
     "UtlCode": "346",
-    "AiCode": "A346",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A346"
   },
   {
     "UtlCode": "350",
-    "AiCode": "A359",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A359"
   },
   {
     "UtlCode": "359",
-    "AiCode": "A359",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A359"
   },
   {
     "UtlCode": "380",
-    "AiCode": "A388",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A388"
   },
   {
     "UtlCode": "388",
-    "AiCode": "A388",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A388"
   },
   {
     "UtlCode": "717",
-    "AiCode": "B712",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B712"
   },
   {
     "UtlCode": "722",
-    "AiCode": "B722",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B722"
   },
   {
     "UtlCode": "727",
-    "AiCode": "B727",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B727"
   },
   {
     "UtlCode": "72F",
-    "AiCode": "B727",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B727"
   },
   {
     "UtlCode": "72Y",
-    "AiCode": "B727",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B727"
   },
   {
     "UtlCode": "731",
-    "AiCode": "B732",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B732"
   },
   {
     "UtlCode": "732",
-    "AiCode": "B732",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B732"
   },
   {
     "UtlCode": "733",
-    "AiCode": "B733",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B733"
   },
   {
     "UtlCode": "734",
-    "AiCode": "B734;B733",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B734;B733"
   },
   {
     "UtlCode": "735",
-    "AiCode": "B735",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B735"
   },
   {
     "UtlCode": "736",
-    "AiCode": "B736",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B736"
   },
   {
     "UtlCode": "737",
-    "AiCode": "B737",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B737"
   },
   {
     "UtlCode": "738",
-    "AiCode": "B738",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B738"
   },
   {
     "UtlCode": "739",
-    "AiCode": "B739",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B739"
   },
   {
     "UtlCode": "73C",
-    "AiCode": "B737;B738;B739",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B737;B738;B739"
   },
   {
     "UtlCode": "73E",
-    "AiCode": "B737;B738;B739",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B737;B738;B739"
   },
   {
     "UtlCode": "73F",
-    "AiCode": "B737;B738;B739",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B737;B738;B739"
   },
   {
     "UtlCode": "73G",
-    "AiCode": "B737;B738;B739",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B737;B738;B739"
   },
   {
     "UtlCode": "73H",
-    "AiCode": "B738",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B738"
   },
   {
     "UtlCode": "73J",
-    "AiCode": "B739",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B739"
   },
   {
     "UtlCode": "73L",
-    "AiCode": "B732",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B732"
   },
   {
     "UtlCode": "73M",
-    "AiCode": "B732",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B732"
   },
   {
     "UtlCode": "73N",
-    "AiCode": "B733",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B733"
   },
   {
     "UtlCode": "73P",
-    "AiCode": "B737;B738",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B737;B738"
   },
   {
     "UtlCode": "73Q",
-    "AiCode": "B737;B738",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B737;B738"
   },
   {
     "UtlCode": "73R",
-    "AiCode": "B737",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B737"
   },
   {
     "UtlCode": "73S",
-    "AiCode": "B734",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B734"
   },
   {
     "UtlCode": "73W",
-    "AiCode": "B735;B736;B738;B739",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B735;B736;B738;B739"
   },
   {
     "UtlCode": "73X",
-    "AiCode": "732",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "732"
   },
   {
     "UtlCode": "73Y",
-    "AiCode": "B722",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B722"
   },
   {
     "UtlCode": "744",
-    "AiCode": "B744;B748",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B744"
   },
   {
     "UtlCode": "747",
-    "AiCode": "B741;B742;B743;B744;B748",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B741;B742;B743;B744;B748"
   },
   {
     "UtlCode": "74E",
-    "AiCode": "B744;B748",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B744;B748"
   },
   {
     "UtlCode": "74F",
-    "AiCode": "B74F;B744",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B74F;B744"
   },
   {
     "UtlCode": "74H",
-    "AiCode": "B744;B748",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B748"
   },
   {
     "UtlCode": "74L",
-    "AiCode": "B744;B748",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B744;B748"
   },
   {
     "UtlCode": "74N",
-    "AiCode": "B74N",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B74N"
   },
   {
     "UtlCode": "74X",
-    "AiCode": "B744;B748",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B744;B748"
   },
   {
     "UtlCode": "74Y",
-    "AiCode": "B74N;B74F;B744",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B74N;B74F;B744"
   },
   {
     "UtlCode": "752",
-    "AiCode": "B752",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B752"
   },
   {
     "UtlCode": "753",
-    "AiCode": "B753",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B753"
   },
   {
     "UtlCode": "757",
-    "AiCode": "B752;B753",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B752;B753"
   },
   {
     "UtlCode": "75F",
-    "AiCode": "B752;B753",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B752;B753"
   },
   {
     "UtlCode": "75T",
-    "AiCode": "B752;B753",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B752;B753"
   },
   {
     "UtlCode": "75W",
-    "AiCode": "B752;B753",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B752;B753"
   },
   {
     "UtlCode": "762",
-    "AiCode": "B762",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B762"
   },
   {
     "UtlCode": "763",
-    "AiCode": "B763",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B763"
   },
   {
     "UtlCode": "764",
-    "AiCode": "B764",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B764"
   },
   {
     "UtlCode": "767",
-    "AiCode": "B762;B763;B764",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B762;B763;B764"
   },
   {
     "UtlCode": "76F",
-    "AiCode": "B762;B763;B764",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B762;B763;B764"
   },
   {
     "UtlCode": "76V",
-    "AiCode": "B762;B763;B764",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B762;B763;B764"
   },
   {
     "UtlCode": "76W",
-    "AiCode": "B762;B763;B764",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B762;B763;B764"
   },
   {
     "UtlCode": "76X",
-    "AiCode": "B762;B763;B764",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B762;B763;B764"
   },
   {
     "UtlCode": "76Y",
-    "AiCode": "B762;B763;B764",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B762;B763;B764"
   },
   {
     "UtlCode": "772",
-    "AiCode": "B772",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B772"
   },
   {
     "UtlCode": "773",
-    "AiCode": "B773",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B773"
   },
   {
     "UtlCode": "777",
-    "AiCode": "B772;B773",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B772;B773"
   },
   {
     "UtlCode": "77F",
-    "AiCode": "B772;B773",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B772;B773"
   },
   {
     "UtlCode": "77L",
-    "AiCode": "B772",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B772"
   },
   {
     "UtlCode": "77W",
-    "AiCode": "B773",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B773"
   },
   {
     "UtlCode": "77X",
-    "AiCode": "B772;B773",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B772;B773"
   },
   {
     "UtlCode": "787",
-    "AiCode": "B788;B789",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B788;B789"
   },
   {
     "UtlCode": "788",
-    "AiCode": "B788",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B788"
   },
   {
     "UtlCode": "789",
-    "AiCode": "B789;B781",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B789;B781"
   },
   {
     "UtlCode": "7S8",
-    "AiCode": "B738",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B738"
   },
   {
     "UtlCode": "A32",
-    "AiCode": "AN32",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "AN32"
   },
   {
     "UtlCode": "A40",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "A58",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "A81",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "AB3",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "AB4",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "AB6",
-    "AiCode": "A306",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A306"
   },
   {
     "UtlCode": "ABF",
-    "AiCode": "A306",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A306"
   },
   {
     "UtlCode": "ABX",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "ABY",
-    "AiCode": "A306",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A306"
   },
   {
     "UtlCode": "AN4",
-    "AiCode": "AN24",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "AN24"
   },
   {
     "UtlCode": "ANF",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "APF",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "AR1",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "AR8",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "ARJ",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "AT7",
-    "AiCode": "AT72;AT75",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "AT72;AT75"
   },
   {
     "UtlCode": "ATP",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "ATR",
-    "AiCode": "AT42;AT43;AT44;AT45;AT72",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "AT42;AT43;AT44;AT45;AT72"
   },
   {
     "UtlCode": "AT4",
-    "AiCode": "AT42;AT43;AT44;AT45",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "AT42;AT43;AT44;AT45"
   },
   {
     "UtlCode": "ATZ",
-    "AiCode": "AT42;AT43;AT44;AT45;AT72",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "AT42;AT43;AT44;AT45;AT72"
   },
   {
     "UtlCode": "BE1",
-    "AiCode": "B190",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B190"
   },
   {
     "UtlCode": "BE2",
-    "AiCode": "B190",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B190"
   },
   {
     "UtlCode": "BE9",
-    "AiCode": "B190",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B190"
   },
   {
     "UtlCode": "BEC",
-    "AiCode": "B190",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B190"
   },
   {
     "UtlCode": "BEF",
-    "AiCode": "B190",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B190"
   },
   {
     "UtlCode": "BEH",
-    "AiCode": "B190",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B190"
   },
   {
     "UtlCode": "BES",
-    "AiCode": "B190",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B190"
   },
   {
     "UtlCode": "BET",
-    "AiCode": "B190",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "B190"
   },
   {
     "UtlCode": "BH0",
@@ -637,527 +511,422 @@
   },
   {
     "UtlCode": "BH2",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "BL0",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "BM0",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "BNI",
-    "AiCode": "BN2P",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "BN2P"
   },
   {
     "UtlCode": "BNT",
-    "AiCode": "BN2P",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "BN2P"
   },
   {
     "UtlCode": "CN1",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "CN2",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "CNA",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "CNC",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "CNF",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "CNJ",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "CNT",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
     {
     "UtlCode": "CR1",
-    "AiCode": "CRJ1;CRJ2",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "CRJ1;CRJ2"
   },
   {
     "UtlCode": "CR2",
-    "AiCode": "CRJ2",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "CRJ2"
   },
   {
     "UtlCode": "CR7",
-    "AiCode": "CRJ7",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "CRJ7"
   },
   {
     "UtlCode": "CR9",
-    "AiCode": "CRJ9",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "CRJ9"
   },
   {
     "UtlCode": "CRA",
-    "AiCode": "CRJ2",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "CRJ2"
   },
   {
     "UtlCode": "CRF",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "CRJ",
-    "AiCode": "CRJ1;CRJ2;CRJ7;CRJ9",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "CRJ1;CRJ2;CRJ7;CRJ9"
   },
   {
     "UtlCode": "CRK",
-    "AiCode": "CRJK;CRJ9",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "CRJK;CRJ9"
   },
   {
     "UtlCode": "CS1",
-    "AiCode": "CS1",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "CS1"
   },
   {
     "UtlCode": "CS2",
-    "AiCode": "C212",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "C212"
   },
   {
     "UtlCode": "CS3",
-    "AiCode": "CS3",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "CS3"
   },
   {
     "UtlCode": "CV5",
-    "AiCode": "CVLT",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "CVLT"
   },
   {
     "UtlCode": "CVF",
-    "AiCode": "CVLT;CVLP;CVLT",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "CVLT;CVLP;CVLT"
   },
   {
     "UtlCode": "CVX",
-    "AiCode": "CVLP",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "CVLP"
   },
   {
     "UtlCode": "CVY",
-    "AiCode": "CVLT",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "CVLT"
   },
   {
     "UtlCode": "CWC",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "D1F",
-    "AiCode": "MD11",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "MD11"
   },
   {
     "UtlCode": "D28",
-    "AiCode": "D228",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "D228"
   },
   {
     "UtlCode": "D38",
-    "AiCode": "D328",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "D328"
   },
   {
     "UtlCode": "D6F",
-    "AiCode": "DC6",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "DC6"
   },
   {
     "UtlCode": "D93",
-    "AiCode": "DC93",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "DC93"
   },
   {
     "UtlCode": "D9C",
-    "AiCode": "DC93",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "DC93"
   },
   {
     "UtlCode": "D9F",
-    "AiCode": "DC91;DC93;DC94",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "DC91;DC93;DC94"
   },
   {
     "UtlCode": "DC3",
-    "AiCode": "DC3",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "DC3"
   },
   {
     "UtlCode": "DC9",
-    "AiCode": "DC91;DC92;DC93;DC94;DC95",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "DC91;DC92;DC93;DC94;DC95"
   },
   {
     "UtlCode": "DH1",
-    "AiCode": "DH8A;DH8B",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "DH8A;DH8B"
   },
   {
     "UtlCode": "DH2",
-    "AiCode": "DH8B",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "DH8B"
   },
   {
     "UtlCode": "DH3",
-    "AiCode": "DH8C",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "DH8C"
   },
   {
     "UtlCode": "DH4",
-    "AiCode": "DH8D",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "DH8D"
   },
   {
     "UtlCode": "DH7",
-    "AiCode": "DHC7",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "DHC7"
   },
   {
     "UtlCode": "DH8",
-    "AiCode": "DH8A;DH8B;DH8C;DH8B",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "DH8A;DH8B;DH8C;DH8B"
   },
   {
     "UtlCode": "DHC",
-    "AiCode": "DHC4",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "DHC4"
   },
   {
     "UtlCode": "DHP",
-    "AiCode": "DHC2",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "DHC2"
   },
   {
     "UtlCode": "DHT",
-    "AiCode": "DHC6;DH8B",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "DHC6;DH8B"
   },
   {
     "UtlCode": "E70",
-    "AiCode": "E170",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "E170"
   },
   {
     "UtlCode": "E75",
-    "AiCode": "E175",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "E175"
   },
   {
     "UtlCode": "E7W",
-    "AiCode": "E170;E175",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "E170;E175"
   },
   {
     "UtlCode": "E90",
-    "AiCode": "E190",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "E190"
   },
   {
     "UtlCode": "E95",
-    "AiCode": "E195",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "E195"
   },
   {
     "UtlCode": "EM2",
-    "AiCode": "E120",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "E120"
   },
   {
     "UtlCode": "EMB",
-    "AiCode": "E110",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "E110"
   },
   {
     "UtlCode": "EMJ",
-    "AiCode": "E170;E190",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "E170;E190"
   },
   {
     "UtlCode": "EP1",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "ER3",
-    "AiCode": "E135",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "E135"
   },
   {
     "UtlCode": "ER4",
-    "AiCode": "E145;E140",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "E145;E140"
   },
   {
     "UtlCode": "ERD",
-    "AiCode": "E140",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "E140"
   },
   {
     "UtlCode": "ERJ",
-    "AiCode": "E135",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "E135"
   },
   {
     "UtlCode": "F24",
-    "AiCode": "F28",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "F28"
   },
   {
     "UtlCode": "F50",
-    "AiCode": "F50",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "F50"
   },
   {
     "UtlCode": "F70",
-    "AiCode": "F70",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "F70"
   },
   {
     "UtlCode": "FRJ",
-    "AiCode": "J328",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "J328"
   },
   {
     "UtlCode": "GH0",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "GL0",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "GM0",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "GRG",
-    "AiCode": "G21",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "G21"
   },
   {
     "UtlCode": "GRJ",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "HS7",
-    "AiCode": "A748",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "A748"
   },
   {
     "UtlCode": "HYD",
-    "AiCode": "APZ",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "APZ"
   },
   {
     "UtlCode": "I14",
-    "AiCode": "I114",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "I114"
   },
   {
     "UtlCode": "IL7",
-    "AiCode": "IL76",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "IL76"
   },
   {
     "UtlCode": "IL9",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "J31",
-    "AiCode": "JS31",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "JS31"
   },
   {
     "UtlCode": "J32",
-    "AiCode": "JS32",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "JS32"
   },
   {
     "UtlCode": "J41",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "L4T",
-    "AiCode": "L410",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "L410"
   },
   {
     "UtlCode": "LOH",
-    "AiCode": "C130",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "C130"
   },
   {
     "UtlCode": "M11",
-    "AiCode": "MD11",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "MD11"
   },
   {
     "UtlCode": "M1F",
-    "AiCode": "MD11",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "MD11"
   },
   {
     "UtlCode": "M80",
-    "AiCode": "MD80",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "MD80"
   },
   {
     "UtlCode": "M82",
-    "AiCode": "MD82",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "MD82"
   },
   {
     "UtlCode": "M83",
-    "AiCode": "MD83",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "MD83"
   },
   {
     "UtlCode": "M87",
-    "AiCode": "MD87",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "MD87"
   },
   {
     "UtlCode": "M88",
-    "AiCode": "MD88",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "MD88"
   },
   {
     "UtlCode": "M90",
-    "AiCode": "MD90",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "MD90"
   },
   {
     "UtlCode": "MA6",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "PA1",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "PA2",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "PAG",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "PL2",
-    "AiCode": "PC12",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "PC12"
   },
   {
     "UtlCode": "S20",
-    "AiCode": "SB20",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "SB20"
   },
   {
     "UtlCode": "SF3",
-    "AiCode": "SF34",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "SF34"
   },
   {
     "UtlCode": "SFB",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "SFF",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "SH3",
-    "AiCode": "SH33",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "SH33"
   },
   {
     "UtlCode": "SU9",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "SWM",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "T20",
-    "AiCode": "T204",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "T204"
   },
   {
     "UtlCode": "TU3",
-    "AiCode": "",
-    "SearchIn": "FLai;MISC"
+    "AiCode": ""
   },
   {
     "UtlCode": "TU5",
-    "AiCode": "T154",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "T154"
   },
   {
     "UtlCode": "YK2",
-    "AiCode": "YK42",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "YK42"
   },
   {
     "UtlCode": "YK4",
-    "AiCode": "YK40",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "YK40"
   },
   {
     "UtlCode": "YN2",
-    "AiCode": "Y12",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "Y12"
   },
   {
     "UtlCode": "YN7",
-    "AiCode": "AN24",
-    "SearchIn": "FLai;MISC"
+    "AiCode": "AN24"
   }
 ]

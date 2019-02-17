@@ -38,14 +38,14 @@ Public Class Form1
         repaintFile =  settings.utl.path +"\"+ settings.utl.repaintFileName
         RepaintFileLabel.Text = repaintFile
         If settings.addOnlyMissing = False Then
-            ReplaceAllLabel.Text = "False"
+            ReplaceAllLabel.Text = "REPLACE ALL"
         Else
-            ReplaceAllLabel.Text = "True"
+            ReplaceAllLabel.Text = "ONLY MISSING"
         End If
         If settings.includeOper = False Then
-            IncludeOper.Text = "False"
+            IncludeOper.Text = "CAR"
         Else
-            IncludeOper.Text = "True"
+            IncludeOper.Text = "CAR AND OPER"
         End If
 
     End Sub
@@ -66,48 +66,57 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Cursor = Cursors.WaitCursor 
+        Cursor = Cursors.WaitCursor
         Application.DoEvents()
         logWriter = New System.IO.StreamWriter("dhq.ai2utl.log.txt")
         totalCount = 0
         aircraftMap.Clear()
+        OutputTextBox.Clear()
+
         Try
             If ReadRepaintsXml() = False Then
                 Return
             End If
 
-        ReadFlaiFolder()
-        Logging("Flai Ai Models :    " + CStr(totalAiModels))
-        ReadMiscAiFolder()
-        Logging("Total Ai Models:    " + CStr(totalAiModels))
+            ReadFlaiFolder()
+            Logging("Flai Ai Models :    " + CStr(totalAiModels))
+            ReadMiscAiFolder()
+            Logging("Total Ai Models:    " + CStr(totalAiModels))
 
-        Logging("")
-        Logging("=============================================================")
-        Dim totalUtlAircraft As Integer = 0
-        For Each repaintfleet As repaints_informationRepaint_fleet In repaintsInformation.repaints()
+            Logging("")
+            Logging("=============================================================")
+            Dim totalUtlAircraft As Integer = 0
+            For Each repaintfleet As repaints_informationRepaint_fleet In repaintsInformation.repaints()
+                ProgressLabel.Text = "Processing: Utl Aircraft: " + repaintfleet.equip + " | Carrier: " + repaintfleet.car + " | Operator: " + repaintfleet.oper
+                ProgressBar.Value = 100 * totalUtlAircraft / repaintsInformation.repaints().Count
+
+                Application.DoEvents()
+
                 If BuildRepaintVisList(repaintfleet, repaintfleet.car, "CAR") = 0 And settings.includeOper = True Then
                     BuildRepaintVisList(repaintfleet, repaintfleet.oper, "OPER")
                 End If
                 totalUtlAircraft = totalUtlAircraft + 1
-        Next
+            Next
 
-        Logging("")
-        Logging("=============================================================")
-        Logging("")
+            Logging("")
+            Logging("=============================================================")
+            Logging("")
             Logging("Total UTL Model processed:" + CStr(totalUtlAircraft))
             Logging("Total Ai Replaced:        " + CStr(totalCount))
             Logging("")
-        Logging("=============================================================")
-        OutputTextBox.ScrollToCaret()
-        Dim output As New System.IO.StreamWriter(replacementFile)
-        repaintsSer.Serialize(output, repaintsInformation)
-        output.Close()
-        logWriter.Close()
+            Logging("=============================================================")
+            OutputTextBox.ScrollToCaret()
+            Dim output As New System.IO.StreamWriter(replacementFile)
+            repaintsSer.Serialize(output, repaintsInformation)
+            output.Close()
+            logWriter.Close()
         Finally
             Cursor = Cursors.Default
         End Try
 
     End Sub
+
+
 
 
     Private Function ReadRepaintsXml() As Boolean
@@ -269,6 +278,9 @@ Public Class Form1
         Return aiCode+"-"+airline
     End Function
 
+    Private Sub Label2_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class
 
 
@@ -277,7 +289,6 @@ End Class
 Public Class SearchCode
     Public UtlCode As String
     Public AiCode As String
-    Public SearchIn As String
 End Class
 
 Public Class SearchCodes
