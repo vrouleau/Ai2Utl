@@ -22,11 +22,12 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.OutputTextBox = New System.Windows.Forms.RichTextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.IncludeOper = New System.Windows.Forms.Label()
+        Me.ProgramMode = New System.Windows.Forms.Label()
         Me.ReplaceAllLabel = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.RepaintFileLabel = New System.Windows.Forms.Label()
@@ -86,7 +87,7 @@ Partial Class Form1
         '
         Me.GroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox1.Controls.Add(Me.IncludeOper)
+        Me.GroupBox1.Controls.Add(Me.ProgramMode)
         Me.GroupBox1.Controls.Add(Me.ReplaceAllLabel)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.RepaintFileLabel)
@@ -104,15 +105,15 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Settings"
         '
-        'IncludeOper
+        'ProgramMode
         '
-        Me.IncludeOper.AutoSize = True
-        Me.IncludeOper.Font = New System.Drawing.Font("Lucida Console", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IncludeOper.Location = New System.Drawing.Point(187, 87)
-        Me.IncludeOper.Name = "IncludeOper"
-        Me.IncludeOper.Size = New System.Drawing.Size(18, 16)
-        Me.IncludeOper.TabIndex = 14
-        Me.IncludeOper.Text = "."
+        Me.ProgramMode.AutoSize = True
+        Me.ProgramMode.Font = New System.Drawing.Font("Lucida Console", 8.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProgramMode.Location = New System.Drawing.Point(187, 87)
+        Me.ProgramMode.Name = "ProgramMode"
+        Me.ProgramMode.Size = New System.Drawing.Size(18, 16)
+        Me.ProgramMode.TabIndex = 14
+        Me.ProgramMode.Text = "."
         '
         'ReplaceAllLabel
         '
@@ -132,7 +133,7 @@ Partial Class Form1
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(297, 20)
         Me.Label5.TabIndex = 12
-        Me.Label5.Text = "Program Version: 1.1.0.0"
+        Me.Label5.Text = "Program Version: 1.1.1.0"
         '
         'RepaintFileLabel
         '
@@ -238,6 +239,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Form1"
         Me.Text = "AI2Utl Injector"
@@ -263,7 +265,7 @@ Partial Class Form1
     Friend WithEvents RepaintFileLabel As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents ReplaceAllLabel As Label
-    Friend WithEvents IncludeOper As Label
+    Friend WithEvents ProgramMode As Label
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents ProgressLabel As ToolStripStatusLabel
     Friend WithEvents ProgressBar As ToolStripProgressBar

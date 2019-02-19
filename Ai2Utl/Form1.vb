@@ -12,6 +12,7 @@ Public Class Form1
     Dim settings As Settings
     Dim searchCodes() As SearchCode
     Dim logWriter As System.IO.StreamWriter
+    Dim logWriterFileName As String = "dhq.ai2utl.log.txt"
     Dim repaintsInformation As repaints_information
     Dim totalReplaced As Integer
     Dim totalAiModels As Integer
@@ -22,6 +23,7 @@ Public Class Form1
     Public Sub New()
 
         InitializeComponent()
+
         ReadSettings()
     End Sub
 
@@ -29,25 +31,32 @@ Public Class Form1
         Try
             Dim settingsjson As String = File.ReadAllText("dhq.ai2utl.settings.json")
             settings = JsonConvert.DeserializeObject(Of Settings)(settingsjson)
-        Catch e As System.IO.FileNotFoundException
-                Logging("ERROR: Cant read settings file")
-        End Try
-        replacementFile = settings.utl.path +"\dhq.ai2utl.replacement.result.xml"
-        ReplacementFileLabel.Text = replacementFile
-        
-        repaintFile =  settings.utl.path +"\"+ settings.utl.repaintFileName
-        RepaintFileLabel.Text = repaintFile
-        If settings.addOnlyMissing = False Then
-            ReplaceAllLabel.Text = "REPLACE ALL"
-        Else
-            ReplaceAllLabel.Text = "ONLY MISSING"
-        End If
-        If settings.includeOper = False Then
-            IncludeOper.Text = "CAR"
-        Else
-            IncludeOper.Text = "CAR AND OPER"
-        End If
+            replacementFile = settings.utl.path + "\dhq.ai2utl.replacement.result.xml"
+            ReplacementFileLabel.Text = replacementFile
 
+            repaintFile = settings.utl.path + "\" + settings.utl.repaintFileName
+            RepaintFileLabel.Text = repaintFile
+            If settings.addOnlyMissing = False Then
+                ReplaceAllLabel.Text = "REPLACE ALL"
+            Else
+                ReplaceAllLabel.Text = "ONLY MISSING"
+            End If
+            Select Case settings.programMode
+                Case Settings.Mode.Carrier
+                    ProgramMode.Text = "CARRIER"
+                Case Settings.Mode.CarrierOnly
+                    ProgramMode.Text = "CARRIER ONLY"
+                Case Settings.Mode.Oper
+                    ProgramMode.Text = "OPERATOR"
+                Case Settings.Mode.OperOnly
+                    ProgramMode.Text = "OPERATOR ONLY"
+            End Select
+        Catch e As Exception
+            logWriter = New System.IO.StreamWriter(logWriterFileName)
+            Logging("ERROR: Cant read settings: " + e.Message)
+            logWriter.Close()
+            Button1.Enabled = False
+        End Try
     End Sub
 
     Private Sub ReadSearchCodes()
@@ -68,7 +77,8 @@ Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Cursor = Cursors.WaitCursor
         Application.DoEvents()
-        logWriter = New System.IO.StreamWriter("dhq.ai2utl.log.txt")
+        Button1.Enabled = False
+        logWriter = New System.IO.StreamWriter(logWriterFileName)
         totalCount = 0
         aircraftMap.Clear()
         OutputTextBox.Clear()
@@ -91,9 +101,14 @@ Public Class Form1
                 ProgressBar.Value = 100 * totalUtlAircraft / repaintsInformation.repaints().Count
 
                 Application.DoEvents()
-
-                If BuildRepaintVisList(repaintfleet, repaintfleet.car, "CAR") = 0 And settings.includeOper = True Then
-                    BuildRepaintVisList(repaintfleet, repaintfleet.oper, "OPER")
+                If (settings.programMode = Settings.Mode.Carrier Or settings.programMode = Settings.Mode.CarrierOnly) Then
+                    If BuildRepaintVisList(repaintfleet, repaintfleet.car, "CARRIER") = 0 And settings.programMode = Settings.Mode.Carrier Then
+                        BuildRepaintVisList(repaintfleet, repaintfleet.oper, "OPERATOR")
+                    End If
+                Else
+                    If BuildRepaintVisList(repaintfleet, repaintfleet.oper, "OPERATOR") = 0 And settings.programMode = Settings.Mode.Oper Then
+                        BuildRepaintVisList(repaintfleet, repaintfleet.car, "CARRIER")
+                    End If
                 End If
                 totalUtlAircraft = totalUtlAircraft + 1
             Next
@@ -112,6 +127,7 @@ Public Class Form1
             logWriter.Close()
         Finally
             Cursor = Cursors.Default
+            Button1.Enabled = True
         End Try
 
     End Sub
@@ -248,7 +264,7 @@ Public Class Form1
             Dim newRepaintVisArray(newRepaintVisList.Count) As repaints_informationRepaint_fleetRepaint_visual
             Dim ratio As Integer = Math.Floor(100 / count)
             Dim firstRatio As Integer =  (100-ratio*count)
-            Logging("Replace Utl Aircraft:" + repaintfleet.equip + "| Carrier: " + repaintfleet.car + " | Operator: " + repaintfleet.oper +" | Mode:" +type )
+            Logging("Replace Utl Aircraft:" + repaintfleet.equip + "| Carrier: " + repaintfleet.car + " | Operator: " + repaintfleet.oper + " | Found:" + type)
 
             For Each newRepaintVis As repaints_informationRepaint_fleetRepaint_visual In newRepaintVisList
                 newRepaintVis.val = ratio 
@@ -306,11 +322,18 @@ End Class
 Public Class Miscai
     Public path As String
 End Class
+
 Public Class Settings
+    Enum Mode
+        Carrier
+        CarrierOnly
+        Oper
+        OperOnly
+    End Enum
     Public utl As Utl
     Public flai As Flai
     Public miscai() As Miscai
-    Public includeOper As Boolean
+    Public programMode As Mode
     Public addOnlyMissing As Boolean
     Public maxRepaints As Integer
 End Class

@@ -1,17 +1,17 @@
 {
   "utl": {
     "repaintFileName": "repaints.xml",
-    "path": "C:\\Users\\USERNAME\\AppData\\Roaming\\Flight One Software\\utLive\\Data"
+    "path": "C:\\Users\\vince\\AppData\\Roaming\\Flight One Software\\utLive\\Data"
   },
   "flai": {
-    "path": "C:\\Program Files (x86)\\Addon Manager\\Simobjects\\FLAi\\SimObjects\\Airplane"
+    "path": ""
   },
   "miscai": [
     {
       "path": "C:\\Program Files (x86)\\Addon Manager\\Simobjects\\aiAirCraft"
     }
   ],
-  "includeOper": true,
+  "programMode": "Oper",
   "addOnlyMissing": false,
   "maxRepaints": 20
 }
