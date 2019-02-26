@@ -85,11 +85,11 @@
   },
   {
     "UtlCode": "33F",
-    "AiCode": "A332_F"
+    "AiCode": "A33F"
   },
   {
     "UtlCode": "33X",
-    "AiCode": "A332;A333"
+    "AiCode": "A33F"
   },
   {
     "UtlCode": "340",
@@ -185,11 +185,11 @@
   },
   {
     "UtlCode": "73C",
-    "AiCode": "B737;B738;B739"
+    "AiCode": "B733"
   },
   {
     "UtlCode": "73E",
-    "AiCode": "B737;B738;B739"
+    "AiCode": "B735"
   },
   {
     "UtlCode": "73F",
@@ -197,7 +197,7 @@
   },
   {
     "UtlCode": "73G",
-    "AiCode": "B737;B738;B739"
+    "AiCode": "B737"
   },
   {
     "UtlCode": "73H",
@@ -237,7 +237,7 @@
   },
   {
     "UtlCode": "73W",
-    "AiCode": "B735;B736;B738;B739"
+    "AiCode": "B737"
   },
   {
     "UtlCode": "73X",
@@ -245,7 +245,7 @@
   },
   {
     "UtlCode": "73Y",
-    "AiCode": "B722"
+    "AiCode": "B733"
   },
   {
     "UtlCode": "744",
@@ -257,11 +257,11 @@
   },
   {
     "UtlCode": "74E",
-    "AiCode": "B744;B748"
+    "AiCode": "B74F;B74N"
   },
   {
     "UtlCode": "74F",
-    "AiCode": "B74F;B744"
+    "AiCode": "B74F;B74N"
   },
   {
     "UtlCode": "74H",
@@ -277,11 +277,11 @@
   },
   {
     "UtlCode": "74X",
-    "AiCode": "B744;B748"
+    "AiCode": "B74F"
   },
   {
     "UtlCode": "74Y",
-    "AiCode": "B74N;B74F;B744"
+    "AiCode": "B74F"
   },
   {
     "UtlCode": "752",
@@ -325,15 +325,15 @@
   },
   {
     "UtlCode": "76F",
-    "AiCode": "B762;B763;B764"
+    "AiCode": "B76F"
   },
   {
     "UtlCode": "76V",
-    "AiCode": "B762;B763;B764"
+    "AiCode": "B76F"
   },
   {
     "UtlCode": "76W",
-    "AiCode": "B762;B763;B764"
+    "AiCode": "B763"
   },
   {
     "UtlCode": "76X",
@@ -345,7 +345,7 @@
   },
   {
     "UtlCode": "772",
-    "AiCode": "B772"
+    "AiCode": "B772;B773"
   },
   {
     "UtlCode": "773",
@@ -357,7 +357,7 @@
   },
   {
     "UtlCode": "77F",
-    "AiCode": "B772;B773"
+    "AiCode": "B77F"
   },
   {
     "UtlCode": "77L",
@@ -369,7 +369,7 @@
   },
   {
     "UtlCode": "77X",
-    "AiCode": "B772;B773"
+    "AiCode": "B77F"
   },
   {
     "UtlCode": "787",
@@ -381,7 +381,7 @@
   },
   {
     "UtlCode": "789",
-    "AiCode": "B789;B781"
+    "AiCode": "B789"
   },
   {
     "UtlCode": "7S8",
@@ -659,7 +659,7 @@
   },
   {
     "UtlCode": "DH1",
-    "AiCode": "DH8A;DH8B"
+    "AiCode": "DH8A;DH8B;DH8C;DH8D"
   },
   {
     "UtlCode": "DH2",
@@ -703,7 +703,7 @@
   },
   {
     "UtlCode": "E7W",
-    "AiCode": "E170;E175"
+    "AiCode": "E175"
   },
   {
     "UtlCode": "E90",
@@ -731,7 +731,7 @@
   },
   {
     "UtlCode": "ER3",
-    "AiCode": "E135"
+    "AiCode": "E135;E145;E140"
   },
   {
     "UtlCode": "ER4",
@@ -743,7 +743,7 @@
   },
   {
     "UtlCode": "ERJ",
-    "AiCode": "E135"
+    "AiCode": "E135;E145;E140"
   },
   {
     "UtlCode": "F24",

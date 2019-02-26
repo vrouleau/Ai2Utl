@@ -7,6 +7,7 @@ Imports Newtonsoft.Json
 
 Public Class Form1
     Dim aircraftMap As New Dictionary(Of String, HashSet(Of String))
+    Dim aircraftNotUsedSet As New SortedSet(Of String)
     Dim totalCount As Integer = 0
     Dim utlCodeMap As New Dictionary(Of String, String())
     Dim settings As Settings
@@ -81,6 +82,7 @@ Public Class Form1
         logWriter = New System.IO.StreamWriter(logWriterFileName)
         totalCount = 0
         aircraftMap.Clear()
+        aircraftNotUsedSet.Clear()
         OutputTextBox.Clear()
 
         Try
@@ -125,6 +127,11 @@ Public Class Form1
             repaintsSer.Serialize(output, repaintsInformation)
             output.Close()
             logWriter.Close()
+            Dim unusedWriter As System.IO.StreamWriter = New System.IO.StreamWriter("dhq.ai2utl.unused.txt")
+            For Each remaining As String In aircraftNotUsedSet
+                unusedWriter.Write(remaining + Environment.NewLine)
+            Next
+            unusedWriter.Close()
         Finally
             Cursor = Cursors.Default
             Button1.Enabled = True
@@ -201,6 +208,7 @@ Public Class Form1
         Dim parking_codes As String
         Dim lines As Integer = 0
 
+
         While (reader.Peek() <> -1)
             line = reader.ReadLine()
             If line.StartsWith("title=") Then
@@ -218,6 +226,7 @@ Public Class Form1
                         aircraftList.Add(title)
                         aircraftMap.Add(key, aircraftList)
                     End If
+                    aircraftNotUsedSet.Add(title)
                     totalAiModels = totalAiModels + 1
                 Next
             End If
@@ -241,6 +250,9 @@ Public Class Form1
 
             If (utlCodeMap.ContainsKey(repaintfleet.equip)) Then
                 For Each aiCode As String In utlCodeMap(repaintfleet.equip)
+                    If (airLine.Length > 3) Then
+                        airLine = airLine.Substring(0, 3)
+                    End If
                     Dim key As String = MakeKey(aiCode, airLine)
                     If aircraftMap.ContainsKey(key) Then
                         Dim airCraftList As HashSet(Of String) = aircraftMap.Item(key)
@@ -267,10 +279,11 @@ Public Class Form1
             Logging("Replace Utl Aircraft:" + repaintfleet.equip + "| Carrier: " + repaintfleet.car + " | Operator: " + repaintfleet.oper + " | Found:" + type)
 
             For Each newRepaintVis As repaints_informationRepaint_fleetRepaint_visual In newRepaintVisList
-                newRepaintVis.val = ratio 
-                If firstRatio > 0 
+                aircraftNotUsedSet.Remove(newRepaintVis.title)
+                newRepaintVis.val = ratio
+                If firstRatio > 0 Then
                     newRepaintVis.val = newRepaintVis.val + 1
-                    firstRatio=firstRatio-1
+                    firstRatio = firstRatio - 1
                 End If
 
             Next
