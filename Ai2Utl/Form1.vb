@@ -10,6 +10,8 @@ Public Class Form1
     Dim aircraftNotUsedSet As New SortedSet(Of String)
     Dim totalCount As Integer = 0
     Dim utlCodeMap As New Dictionary(Of String, String())
+    Dim utlAigaimCodeMap As New Dictionary(Of String, String())
+    Dim aigaimCodeToAiCodeMap As New Dictionary(Of String, String)
     Dim settings As Settings
     Dim searchCodes() As SearchCode
     Dim logWriter As System.IO.StreamWriter
@@ -62,13 +64,21 @@ Public Class Form1
 
     Private Sub ReadSearchCodes()
         utlCodeMap.Clear()
-
+        aigaimCodeToAiCodeMap.Clear()
         Try
             Dim searchCodesjson As String = File.ReadAllText("dhq.ai2utl.search-codes.json")
             searchCodes = JsonConvert.DeserializeObject(Of SearchCode())(searchCodesjson)
             For Each searchCode As SearchCode In searchCodes
                 Dim aiCodeArray() As String = searchCode.AiCode.Split(";"c)
                 utlCodeMap.Add(searchCode.UtlCode, aiCodeArray)
+                If (Len(searchCode.AigaimAiCode) > 0) Then
+                    Dim aigaimCodeArray() As String = searchCode.AigaimAiCode.Split(";"c)
+                    For Each aigaimCode As String In aigaimCodeArray
+                        If Not aigaimCodeToAiCodeMap.ContainsKey(aigaimCode) Then
+                            aigaimCodeToAiCodeMap.Add(aigaimCode, aiCodeArray.First)
+                        End If
+                    Next
+                End If
             Next
         Catch e As System.IO.FileNotFoundException
             Logging("ERROR: Cant read settings file")
@@ -91,9 +101,11 @@ Public Class Form1
             End If
 
             ReadFlaiFolder()
-            Logging("Flai Ai Models :    " + CStr(totalAiModels))
+            Logging("Flai Ai Models              :    " + CStr(totalAiModels))
+            ReadAIGAIMFolder()
+            Logging("Total With AIGAIM Ai Models :    " + CStr(totalAiModels))
             ReadMiscAiFolder()
-            Logging("Total Ai Models:    " + CStr(totalAiModels))
+            Logging("Total With Misc Ai Models   :    " + CStr(totalAiModels))
 
             Logging("")
             Logging("=============================================================")
@@ -138,10 +150,6 @@ Public Class Form1
         End Try
 
     End Sub
-
-
-
-
     Private Function ReadRepaintsXml() As Boolean
         Dim xmldoc As New XmlDocument
 
@@ -177,27 +185,52 @@ Public Class Form1
                 Next
             End If
         Catch e As Exception
-            Logging("Error reading FLAI Path:"+e.Message)
-         End Try
+            Logging("Error reading FLAI Path:" + e.Message)
+        End Try
     End Sub
+
+    Private Sub ReadAIGAIMFolder()
+        Try
+            If (settings.aigaim.path.Length > 0) Then
+                Dim aigaimDir As DirectoryInfo = New DirectoryInfo(settings.aigaim.path)
+                For Each aircraftFolder As DirectoryInfo In aigaimDir.GetDirectories()
+                    If (aircraftFolder.Name.StartsWith("AIGAIM_")) Then
+                        Dim aigaimDirPart As String = aircraftFolder.Name.Substring(7, aircraftFolder.Name.Length - 7)
+                        For Each aigAimPattern As String In aigaimCodeToAiCodeMap.Keys
+                            If aigaimDirPart.Contains(aigAimPattern) Then
+                                Dim aircraftFileName = aircraftFolder.FullName + "\aircraft.cfg"
+                                Dim aiCode As String = aigaimCodeToAiCodeMap(aigAimPattern)
+                                ReadAirCraftCfg(aircraftFileName, aircraftMap, aiCode)
+                            End If
+                        Next
+                    End If
+                Next
+            End If
+        Catch e As Exception
+            Logging("Error reading AIGAIM Path:" + e.Message)
+        End Try
+    End Sub
+
 
     Private Sub ReadMiscAiFolder()
         Try
             For Each miscai As Miscai In settings.miscai
-                For Each ai2UtlFile As String In My.Computer.FileSystem.GetFiles(
+                If (miscai.path.Length > 0) Then
+                    For Each ai2UtlFile As String In My.Computer.FileSystem.GetFiles(
                         miscai.path,
-                    Microsoft.VisualBasic.FileIO.SearchOption.SearchAllSubDirectories, "*.ai2utl")
-                    Dim fileInfo As System.IO.FileInfo
-                    fileInfo = My.Computer.FileSystem.GetFileInfo(ai2UtlFile)
-                    Dim folderPath As String = fileInfo.DirectoryName
-                    Dim aiCode As String = fileInfo.Name.Substring(0, fileInfo.Name.Length - 7)
-                    Dim aircraftFileName = folderPath + "\aircraft.cfg"
-                    ReadAirCraftCfg(aircraftFileName, aircraftMap, aiCode)
-                Next
+                        Microsoft.VisualBasic.FileIO.SearchOption.SearchAllSubDirectories, "*.ai2utl")
+                        Dim fileInfo As System.IO.FileInfo
+                        fileInfo = My.Computer.FileSystem.GetFileInfo(ai2UtlFile)
+                        Dim folderPath As String = fileInfo.DirectoryName
+                        Dim aiCode As String = fileInfo.Name.Substring(0, fileInfo.Name.Length - 7)
+                        Dim aircraftFileName = folderPath + "\aircraft.cfg"
+                        ReadAirCraftCfg(aircraftFileName, aircraftMap, aiCode)
+                    Next
+                End If
             Next
         Catch e As Exception
-            Logging("Error reading FLAI Path:"+e.Message)
-         End Try
+            Logging("Error reading MiscAI Path:" + e.Message)
+        End Try
     End Sub
 
     Private Sub ReadAirCraftCfg(filename As String, aircraftMap As Dictionary(Of String, HashSet(Of String)), aiCode As String)
@@ -208,29 +241,29 @@ Public Class Form1
         Dim parking_codes As String
         Dim lines As Integer = 0
 
-
         While (reader.Peek() <> -1)
             line = reader.ReadLine()
-            If line.StartsWith("title=") Then
-                title = line.Substring(6, line.Length - 6)
-            End If
-            If line.StartsWith("atc_parking_codes=") Then
-                parking_codes = line.Substring(18, line.Length - 18)
-                Dim parkingCodeArray() As String = parking_codes.Split(","c)
-                For Each parkingCode As String In parkingCodeArray
-                    Dim key As String = MakeKey(aiCode,parkingCode)
-                    If (aircraftMap.ContainsKey(key)) Then
-                        aircraftMap.Item(aiCode + "-" + parkingCode).Add(title)
-                    Else
-                        Dim aircraftList As New HashSet(Of String)
-                        aircraftList.Add(title)
-                        aircraftMap.Add(key, aircraftList)
-                    End If
-                    aircraftNotUsedSet.Add(title)
-                    totalAiModels = totalAiModels + 1
-                Next
-            End If
+                If line.StartsWith("title=") Then
+                    title = line.Substring(6, line.Length - 6)
+                End If
+                If line.StartsWith("atc_parking_codes=") Then
+                    parking_codes = line.Substring(18, line.Length - 18)
+                    Dim parkingCodeArray() As String = parking_codes.Split(","c)
+                    For Each parkingCode As String In parkingCodeArray
+                        Dim key As String = MakeKey(aiCode, parkingCode)
+                        If (aircraftMap.ContainsKey(key)) Then
+                            aircraftMap.Item(key).Add(title)
+                        Else
+                            Dim aircraftList As New HashSet(Of String)
+                            aircraftList.Add(title)
+                            aircraftMap.Add(key, aircraftList)
+                        End If
+                        aircraftNotUsedSet.Add(title)
+                        totalAiModels = totalAiModels + 1
+                    Next
+                End If
         End While
+
     End Sub
 
     Private Function BuildRepaintVisList(repaintfleet As repaints_informationRepaint_fleet, airLine As String, type As String) As Integer
@@ -304,7 +337,12 @@ Public Class Form1
     End Sub
 
     Private Function MakeKey(aiCode As String, airline As String) As String
-        Return aiCode+"-"+airline
+        If (airline.Length > 3) Then
+            ' Disregard AALX, just AAL
+            Return aiCode + "-" + airline.Substring(0, 3)
+        End If
+        Return aiCode + "-" + airline
+
     End Function
 
     Private Sub Label2_Click(sender As Object, e As EventArgs)
@@ -317,6 +355,7 @@ End Class
 
 Public Class SearchCode
     Public UtlCode As String
+    Public AigaimAiCode As String
     Public AiCode As String
 End Class
 
@@ -329,6 +368,10 @@ Public Class Utl
 End Class
 
 Public Class Flai
+    Public path As String
+End Class
+
+Public Class Aigaim
     Public path As String
 End Class
 
@@ -345,6 +388,7 @@ Public Class Settings
     End Enum
     Public utl As Utl
     Public flai As Flai
+    Public aigaim As Aigaim
     Public miscai() As Miscai
     Public programMode As Mode
     Public addOnlyMissing As Boolean

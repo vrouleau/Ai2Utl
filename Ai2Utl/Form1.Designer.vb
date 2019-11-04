@@ -133,7 +133,7 @@ Partial Class Form1
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(297, 20)
         Me.Label5.TabIndex = 12
-        Me.Label5.Text = "Program Version: 1.1.1.0"
+        Me.Label5.Text = "Program Version: 1.2.0.0"
         '
         'RepaintFileLabel
         '

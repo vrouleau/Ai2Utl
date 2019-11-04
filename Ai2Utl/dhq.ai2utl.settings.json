@@ -1,10 +1,13 @@
 {
   "utl": {
     "repaintFileName": "repaints.xml",
-    "path": "C:\\Users\\vince\\AppData\\Roaming\\Flight One Software\\utLive\\Data"
+    "path": "C:\\Users\\xxxx\\AppData\\Roaming\\Flight One Software\\utLive\\Data"
   },
   "flai": {
     "path": ""
+  },
+  "aigaim": {
+    "path": "F:\\Downloads\\AIMOCI\\AIGAIM - OCI\\SimObjects"
   },
   "miscai": [
     {

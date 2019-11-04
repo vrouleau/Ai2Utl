@@ -29,6 +29,7 @@
   },
   {
     "UtlCode": "313",
+	"AigaimAiCode": "A310-300",
     "AiCode": "A310"
   },
   {
@@ -73,15 +74,17 @@
   },
   {
     "UtlCode": "330",
-    "AiCode": "A332;A333"
+    "AiCode": "A332;A333;A339"
   },
   {
     "UtlCode": "332",
+	"AigaimAiCode": "A330-200",	
     "AiCode": "A332"
   },
   {
     "UtlCode": "333",
-    "AiCode": "A333"
+	"AigaimAiCode": "A330-300",
+    "AiCode": "A333;A339"
   },
   {
     "UtlCode": "33F",
@@ -101,14 +104,17 @@
   },
   {
     "UtlCode": "343",
+	"AigaimAiCode": "A340-400",	
     "AiCode": "A343"
   },
   {
     "UtlCode": "345",
+	"AigaimAiCode": "A340-500",	
     "AiCode": "A345"
   },
   {
     "UtlCode": "346",
+	"AigaimAiCode": "A340-600",	
     "AiCode": "A346"
   },
   {
@@ -117,6 +123,7 @@
   },
   {
     "UtlCode": "359",
+	"AigaimAiCode": "A350-900",	
     "AiCode": "A359"
   },
   {
@@ -125,6 +132,7 @@
   },
   {
     "UtlCode": "388",
+	"AigaimAiCode": "A380-800",	
     "AiCode": "A388"
   },
   {
@@ -157,30 +165,38 @@
   },
   {
     "UtlCode": "733",
+	"AigaimAiCode": "B737-300",	
     "AiCode": "B733"
   },
   {
     "UtlCode": "734",
+	"AigaimAiCode": "B737-400",	
     "AiCode": "B734;B733"
   },
   {
     "UtlCode": "735",
+	"AigaimAiCode": "B737-500",	
     "AiCode": "B735"
   },
   {
     "UtlCode": "736",
+	"AigaimAiCode": "B737-600",	
     "AiCode": "B736"
   },
   {
     "UtlCode": "737",
+	"AigaimAiCode": "B737-700",	
     "AiCode": "B737"
   },
   {
     "UtlCode": "738",
+	"AigaimAiCode": "B737-800",	
     "AiCode": "B738"
   },
   {
     "UtlCode": "739",
+	"AigaimAiCode": "B737-900",
+
     "AiCode": "B739"
   },
   {
@@ -205,6 +221,7 @@
   },
   {
     "UtlCode": "73J",
+	"AigaimAiCode": "B737-900",	
     "AiCode": "B739"
   },
   {
@@ -221,11 +238,11 @@
   },
   {
     "UtlCode": "73P",
-    "AiCode": "B737;B738"
+    "AiCode": "B733;B734"
   },
   {
     "UtlCode": "73Q",
-    "AiCode": "B737;B738"
+    "AiCode": "B734"
   },
   {
     "UtlCode": "73R",
@@ -249,6 +266,7 @@
   },
   {
     "UtlCode": "744",
+	"AigaimAiCode": "B747-400",	
     "AiCode": "B744"
   },
   {
@@ -261,10 +279,12 @@
   },
   {
     "UtlCode": "74F",
+	"AigaimAiCode": "B747-800F",	
     "AiCode": "B74F;B74N"
   },
   {
     "UtlCode": "74H",
+	"AigaimAiCode": "B747-800I",	
     "AiCode": "B748"
   },
   {
@@ -313,10 +333,13 @@
   },
   {
     "UtlCode": "763",
+	"AigaimAiCode": "B767-300",	
     "AiCode": "B763"
   },
   {
     "UtlCode": "764",
+	"AigaimAiCode": "B767-400",	
+
     "AiCode": "B764"
   },
   {
@@ -325,7 +348,7 @@
   },
   {
     "UtlCode": "76F",
-    "AiCode": "B76F"
+    "AiCode": "B76F;B763"
   },
   {
     "UtlCode": "76V",
@@ -365,6 +388,7 @@
   },
   {
     "UtlCode": "77W",
+	"AigaimAiCode": "B777-300",
     "AiCode": "B773"
   },
   {
@@ -377,10 +401,12 @@
   },
   {
     "UtlCode": "788",
+	"AigaimAiCode": "B787-8",
     "AiCode": "B788"
   },
   {
     "UtlCode": "789",
+	"AigaimAiCode": "B787-9",
     "AiCode": "B789"
   },
   {
@@ -445,7 +471,7 @@
   },
   {
     "UtlCode": "AR8",
-    "AiCode": ""
+    "AiCode": "RJ85"
   },
   {
     "UtlCode": "ARJ",
@@ -453,6 +479,7 @@
   },
   {
     "UtlCode": "AT7",
+	"AigaimAiCode": "ATR72-600",
     "AiCode": "AT72;AT75"
   },
   {
@@ -466,6 +493,14 @@
   {
     "UtlCode": "AT4",
     "AiCode": "AT42;AT43;AT44;AT45"
+  },
+  {
+    "UtlCode": "AT5",
+    "AiCode": "AT42"
+  },
+  {
+    "UtlCode": "AT3",
+    "AiCode": "AT42"
   },
   {
     "UtlCode": "ATZ",
@@ -506,8 +541,6 @@
   {
     "UtlCode": "BH0",
     "AiCode": "",
-
-    "SearchIn": "FLai;MISC"
   },
   {
     "UtlCode": "BH2",
@@ -567,10 +600,12 @@
   },
   {
     "UtlCode": "CR7",
+	"AigaimAiCode": "CRJ-700",
     "AiCode": "CRJ7"
   },
   {
     "UtlCode": "CR9",
+	"AigaimAiCode": "CRJ-900",
     "AiCode": "CRJ9"
   },
   {
@@ -659,10 +694,12 @@
   },
   {
     "UtlCode": "DH1",
-    "AiCode": "DH8A;DH8B;DH8C;DH8D"
+	"AigaimAiCode": "Dash8-100",
+    "AiCode": "DH8A;DH8B"
   },
   {
     "UtlCode": "DH2",
+	"AigaimAiCode": "Dash8-200",
     "AiCode": "DH8B"
   },
   {
@@ -671,6 +708,8 @@
   },
   {
     "UtlCode": "DH4",
+	"AigaimAiCode": "Dash8-400",
+
     "AiCode": "DH8D"
   },
   {
@@ -679,7 +718,7 @@
   },
   {
     "UtlCode": "DH8",
-    "AiCode": "DH8A;DH8B;DH8C;DH8B"
+    "AiCode": "DH8A;DH8B;DH8C;DH8D"
   },
   {
     "UtlCode": "DHC",
@@ -699,6 +738,7 @@
   },
   {
     "UtlCode": "E75",
+	"AigaimAiCode": "EMB-170",
     "AiCode": "E175"
   },
   {
@@ -723,6 +763,7 @@
   },
   {
     "UtlCode": "EMJ",
+	"AigaimAiCode": "EMB-170",
     "AiCode": "E170;E190"
   },
   {
@@ -731,10 +772,11 @@
   },
   {
     "UtlCode": "ER3",
-    "AiCode": "E135;E145;E140"
+    "AiCode": "E135"
   },
   {
     "UtlCode": "ER4",
+	"AigaimAiCode": "AIM_ERJ-145",
     "AiCode": "E145;E140"
   },
   {
@@ -743,6 +785,7 @@
   },
   {
     "UtlCode": "ERJ",
+	"AigaimAiCode": "AIM_ERJ-145",
     "AiCode": "E135;E145;E140"
   },
   {
@@ -823,6 +866,7 @@
   },
   {
     "UtlCode": "M11",
+	"AigaimAiCode": "MD-11",
     "AiCode": "MD11"
   },
   {
@@ -883,7 +927,7 @@
   },
   {
     "UtlCode": "SFB",
-    "AiCode": ""
+    "AiCode": "SF34"
   },
   {
     "UtlCode": "SFF",
